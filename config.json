@@ -1,0 +1,14 @@
+{
+    "consumer_key":"JPTRsNcywJghZYwz7QXxV6uaT",
+    "consumer_secret":"Mqa2HO3t0Yvk5Yt3Tk5D9JtiRz3aWvUhFEw7EprK1h1oepECtR",
+    "access_token":"1704889555-ENnqSFoIJw8zGKr1fI04AQBlbI6KRXjhRc1p14H",
+    "access_token_secret":"nIOegQ40zp67zwNfvl0BPDeXEah45ow1of3CRZppa8tmi",
+
+    "hashtags_file":"./data/hashtags.csv",
+    "tweets_file":"./data/tweets.csv",
+
+    "ie_model_file":"./models/openie-model.2020.03.26.tar.gz",
+    "senti_model_file":"./models/basic_stanford_sentiment_treebank-2020.06.09.tar.gz",
+
+    "search_keyword":"python"
+}
