@@ -16,11 +16,11 @@ app.layout = html.Div(
             ),
             html.Hr(),
 
-            html.Br()
+            html.Br(),
             html.Div(id="latest_processed_tweet"),
             html.Hr(),
 
-            html.Br()
+            html.Br(),
             dcc.Graph(id="live-update-graph-bar"),
             dcc.Interval(id="interval-component", interval=1 * 1000),
             html.Hr(),
