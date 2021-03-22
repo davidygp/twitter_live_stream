@@ -1,0 +1,7 @@
+tweepy==3.10.0
+torch==1.7.1+cu110
+torchvision==0.8.2+cu110
+torchaudio==0.7.2
+allennlp==2.1.0
+allennlp-models==2.1.0
+dash==1.19.0
