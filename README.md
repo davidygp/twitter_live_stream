@@ -6,8 +6,8 @@
 - Allows for searching of Tweet by index with simple Sentiment output & Information Extraction Output
 
 HOW TO RUN:  
-$ git clone git@github.com:davidygp/twitter_live_stream.git
-$ pip install -r requirements.txt  
-$ bash run.sh
+$ git clone git@github.com:davidygp/twitter_live_stream.git  
+$ pip install -r requirements.txt    
+$ bash run.sh  
 
 NOTE: config.json is kept secret to prevent misuse.
