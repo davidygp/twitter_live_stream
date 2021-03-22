@@ -11,6 +11,6 @@ $ cd ./twitter_live_stream
 $ pip install -r requirements.txt  
 $ bash run.sh  
 (If you have no bash, sh works too, else do `python run_collector.py` and `python run_visualization.py`)  
-$ (Open "localhost:8050" on your browser)  
+$ (Open "localhost:8050" or "127.0.0.1:8050/"  on your browser)  
 
 NOTE: config.json is kept secret to prevent misuse.
