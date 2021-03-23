@@ -7,6 +7,7 @@ from tweepy.models import Status
 class MyStreamListener(tweepy.StreamListener):
     """Custom Twitter Stream Listener class for this project
     """
+
     def __init__(self, hashtags_file, tweets_file, debug=False):
         """Initialization of class
         """
@@ -54,15 +55,22 @@ class MyStreamListener(tweepy.StreamListener):
                 # Open saved CSV file
                 hashtags_pdf = pd.read_csv(self.hashtags_file, header=0)
                 # Write/Update the count of the Hashtag
+                print(hashtags_list)
                 for hashtag in hashtags_list:
                     if hashtag in list(hashtags_pdf["hashtag"]):
                         hashtags_pdf.loc[
-                            (hashtags_pdf["hashtag"] == hashtag).index, "count"
+                            hashtags_pdf.index[
+                                hashtags_pdf["hashtag"] == hashtag
+                            ],
+                            "count",
                         ] += 1
                     else:
                         hashtags_pdf.loc[hashtags_pdf.shape[0]] = [hashtag, 1]
                 # Save the CSV file
-                hashtags_pdf.to_csv(self.hashtags_file, header=True, index=False)
+                hashtags_pdf = hashtags_pdf.sort_values(by="count", ascending=False)
+                hashtags_pdf.to_csv(
+                    self.hashtags_file, header=True, index=False
+                )
             # # END: Processing/Saving of the Hashtags # #
 
             # # START: Saving of the Tweets/Hashtags # #
